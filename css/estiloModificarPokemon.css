@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: #ff0300;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.header .logo img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.header .title {
+    font-size: 24px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-guardar {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-guardar:hover {
+    background: #45a049;
+}
+
+.btn-cancelar {
+    background: #ff1200;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-cancelar:hover {
+    background: #d32f2f;
+}
+
+.exito {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 30px;
+    padding: 15px;
+    background: #ff0000;
+    color: white;
+    text-align: center;
+}
+
+.tipo-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.tipo-opcion {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+.tipo-opcion input {
+    display: none;
+}
+
+.tipo-opcion img {
+    width: 50px;
+    height: 50px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.tipo-opcion input:checked + img {
+    border: 2px solid #2196f3;
+    box-shadow: 0 0 10px rgba(33,150,243,0.6);
+}
+
+.sin-subtipo {
+    display: inline-block;
+    padding: 10px;
+    background: #ddd;
+    border-radius: 6px;
+    font-size: 12px;
+}

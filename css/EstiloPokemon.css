@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemon-detail{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px;
+    flex: 1;
+}
+.pokemon-img-container{
+    flex: 1;
+}
+
+.tipo-img {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+#ImagenPokemon{
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+.pokemon-info{
+    flex: 2;
+}
+
+/* Botones navegación */
+.nav-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #ff0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #cc0000;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.title {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ff0000;
+    color: white;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    /* Detalle: de fila pasa a columna */
+
+
+    .pokemon-detail {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .pokemon-img-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    #ImagenPokemon {
+        max-width: 200px;
+    }
+
+    .pokemon-info {
+        text-align: center;
+    }
+
+    /* Botones navegación apilados */
+    .nav-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 80%;
+        max-width: 250px;
+        text-align: center;
+    }
+
+    /* Header compacto */
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .logo img {
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}

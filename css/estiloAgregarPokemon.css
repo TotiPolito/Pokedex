@@ -1,0 +1,249 @@
+/* Reset para que no haya márgenes por defecto en body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Formulario */
+.form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    font-family: Arial, sans-serif;
+    flex-grow: 1; /* ocupa espacio para separar del footer */
+}
+
+/* Título */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Inputs */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Contenedor de tipos */
+.type-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Botones de tipo */
+.type-btn {
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 5px;
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.type-btn img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.type-btn:hover {
+    transform: scale(1.1);
+    border-color: #888;
+}
+
+/* Estado activo */
+.type-btn.active {
+    border-color: #ff0000;
+}
+
+/* Botón enviar */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px; /* más aire arriba */
+    margin-bottom: 40px; /* separación extra del footer */
+    background: #ff0000;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #e68900;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    margin: 0; /* elimina cualquier margen extra */
+}
+
+.logo img {
+    height: 50px;
+}
+
+.title {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ff0000;
+    color: white;
+    margin-top: auto; /* siempre queda abajo */
+    width: 100%;
+}
+
+/* Contenedor del formulario */
+.form-agregar {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.form-agregar h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #cc0000;
+}
+
+/* Campos del formulario */
+form label {
+    display: block;
+    margin: 0.8rem 0 0.3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.2s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #cc0000;
+}
+
+/* Selector de tipos */
+.type-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.type-btn {
+    background: #f3f3f3;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, border 0.2s;
+}
+
+.type-btn img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.type-btn:hover {
+    transform: scale(1.1);
+}
+
+.type-btn.active {
+    border: 2px solid #cc0000;
+    background: #ffe5e5;
+}
+
+/* Botón guardar */
+.btn-guardar {
+    background: linear-gradient(135deg, #4CAF50, #388E3C);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-guardar:hover {
+    background: linear-gradient(135deg, #66bb6a, #2e7d32);
+    transform: translateY(-2px);
+}
+
+.btn-guardar:active {
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .form-agregar {
+        padding: 1.2rem;
+    }
+
+    .type-btn img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .btn-guardar {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
