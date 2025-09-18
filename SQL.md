@@ -1,7 +1,9 @@
 Codigo SQL para crear la base de datos:
 
-CREATE DATABASE IF NOT EXISTS pokedex;
-    USE pokedex;
+    CREATE DATABASE IF NOT EXISTS pokedex;
+        USE pokedex;
+
+
 
     CREATE TABLE pokemons (
     id INT AUTO_INCREMENT PRIMARY KEY,
