@@ -25,3 +25,17 @@ Codigo para llenar la base de datos con datos al Comienzo del proyecto:
     (9, 'Blastoise', 'Agua', 'Sus cañones de agua tienen una potencia suficiente como para perforar un muro de hormigón.', '../img/009.png'),
     (25, 'Pikachu', 'Eléctrico', 'Cuando se enfada, descarga la energía almacenada en las bolsas de sus mejillas.', '../img/025.png');
 
+Codigo para Crear la Base de Datos de Usuarios
+
+    CREATE TABLE IF NOT EXISTS usuarios (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        usuario VARCHAR(50) NOT NULL UNIQUE,
+        password VARCHAR(255) NOT NULL,
+        rol ENUM('admin', 'usuario') NOT NULL);
+
+Codigo para llenar la base de datos de Usuarios:
+
+    INSERT INTO usuarios (usuario, password, rol) VALUES
+    ('admin', 'admin', 'admin'),
+    ('usuario', 'usuario', 'usuario');
+
