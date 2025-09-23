@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Verificar si el usuario está logueado y es admin
 if (!isset($_SESSION["usuario"]) || $_SESSION["rol"] !== "admin") {
     header("Location: Index.php");
     exit;
@@ -13,14 +12,12 @@ if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 }
 
-// Lista de tipos disponibles
 $tiposDisponibles = [
         "Normal","Fuego","Agua","Planta","Eléctrico","Hielo",
         "Lucha","Veneno","Tierra","Volador","Psiquico","Bicho",
         "Roca","Fantasma","Dragon","Siniestro","Acero","Hada"
 ];
 
-// Si viene el número por GET
 if (isset($_GET["numero"])) {
     $numero = intval($_GET["numero"]);
     $sql = "SELECT * FROM pokemons WHERE numero = $numero";
@@ -35,7 +32,6 @@ if (isset($_GET["numero"])) {
     }
 }
 
-// Si se envía el formulario por POST → Actualizar
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $numero = intval($_POST["numero"]);
     $nombre = $conn->real_escape_string($_POST["nombre"]);

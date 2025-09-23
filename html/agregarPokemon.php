@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Verificar si el usuario está logueado y es admin
 if (!isset($_SESSION["usuario"]) || $_SESSION["rol"] !== "admin") {
     header("Location: Index.php");
     exit;
@@ -19,7 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $tipo = $_POST["tipo"];
     $descripcion = $_POST["descripcion"];
 
-    // Guardar imagen con el número como nombre
     $nombreImagen = $numero . ".jpg";
     $rutaDestino = "../img/" . $nombreImagen;
 
@@ -82,7 +80,6 @@ $conn->close();
             }
             ?>
         </div>
-        <!-- Campo oculto con los tipos seleccionados -->
         <input type="hidden" id="tipo" name="tipo" required>
         <label>Descripción:</label>
         <textarea name="descripcion" rows="4" required></textarea>
@@ -105,12 +102,10 @@ $conn->close();
         const index = tiposSeleccionados.indexOf(tipo);
 
         if (index > -1) {
-            // Si ya estaba seleccionado, lo quitamos
             tiposSeleccionados.splice(index, 1);
             boton.classList.remove("active");
         } else {
             if (tiposSeleccionados.length < 2) {
-                // Agregar hasta 2
                 tiposSeleccionados.push(tipo);
                 boton.classList.add("active");
             } else {
@@ -118,7 +113,6 @@ $conn->close();
             }
         }
 
-        // Guardar en el input hidden (ej: Planta/Veneno o Agua)
         document.getElementById("tipo").value = tiposSeleccionados.join("/");
     }
 </script>

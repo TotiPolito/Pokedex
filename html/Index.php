@@ -19,7 +19,6 @@ session_start();
     <h1 class="title">Pokédex</h1>
 
     <?php if (!isset($_SESSION['usuario'])): ?>
-        <!-- Formulario de login -->
         <form class="login-form" method="post" action="login.php">
             <label>
                 <input type="text" placeholder="Usuario" name="usuario" required>
@@ -30,7 +29,6 @@ session_start();
             <button type="submit">Ingresar</button>
         </form>
     <?php else: ?>
-        <!-- Usuario logueado -->
         <div class="user-info">
             <p>Bienvenido, <b><?php echo $_SESSION['usuario']; ?></b> (<?php echo $_SESSION['rol']; ?>)</p>
             <form method="post" action="logout.php" style="display:inline;">
@@ -83,7 +81,6 @@ session_start();
         <th>Tipo</th>
         <th>SubTipo</th>";
 
-        // Solo mostramos la columna Acciones si es admin
         if (isset($_SESSION['rol']) && $_SESSION['rol'] === 'admin') {
             echo "<th>Acciones</th>";
         }
@@ -147,7 +144,6 @@ session_start();
     <?php endif; ?>
 </main>
 
-<!-- Footer -->
 <footer class="footer">
     <p>Pokédex © 2025 - Proyecto académico</p>
 </footer>

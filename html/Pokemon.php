@@ -47,12 +47,10 @@ $conn->close();
 </header>
 
 <main class="pokemon-detail">
-    <!-- Imagen -->
     <div class="pokemon-img-container">
         <img id="ImagenPokemon" src="<?php echo $pokemon["imagen"]; ?>" alt="<?php echo $pokemon["nombre"]; ?>" class="pokemon-img">
     </div>
 
-    <!-- Info -->
     <div class="pokemon-info">
         <h2><?php echo $pokemon["numero"] . " - " . $pokemon["nombre"]; ?></h2>
         <p>
@@ -67,10 +65,8 @@ $conn->close();
         <!-- Navegación entre pokemons -->
         <div class="nav-buttons">
             <?php
-            // Conexión nueva para navegación
             $conn = new mysqli("localhost", "root", "", "pokedex");
 
-            // Pokémon anterior
             $sqlPrev = "SELECT numero FROM pokemons WHERE numero < $numero ORDER BY numero DESC LIMIT 1";
             $resPrev = $conn->query($sqlPrev);
             if ($resPrev && $resPrev->num_rows > 0) {
@@ -78,7 +74,6 @@ $conn->close();
                 echo "<a href='Pokemon.php?numero=$prev' class='btn'>⬅ Anterior</a>";
             }
 
-            // Pokémon siguiente
             $sqlNext = "SELECT numero FROM pokemons WHERE numero > $numero ORDER BY numero ASC LIMIT 1";
             $resNext = $conn->query($sqlNext);
             if ($resNext && $resNext->num_rows > 0) {

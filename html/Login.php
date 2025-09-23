@@ -16,7 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result && $result->num_rows > 0) {
         $user = $result->fetch_assoc();
 
-        // Guardamos en sesión
         $_SESSION['usuario'] = $user['usuario'];
         $_SESSION['rol'] = $user['rol'];
 
